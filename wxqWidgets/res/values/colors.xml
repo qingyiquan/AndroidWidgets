@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="contact_options_text_color">#51c8f5</color>
+    <color name="color_hei_8">#00000000</color>
+    <color name="transparent">@color/color_hei_8</color>
+</resources>
