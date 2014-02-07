@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         
-        <!-- 显示拖动列表 -->
+        <!-- 显示拖动列表  -->
         <activity
             android:name="com.wxq.samples.SwipeViewListActivity"> 
         </activity>
