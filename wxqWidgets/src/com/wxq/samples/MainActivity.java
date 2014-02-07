@@ -44,11 +44,14 @@ public class MainActivity extends Activity {
 						switch (v.getId()) {
 						case R.id.menu_1:
 							Toast.makeText(MainActivity.this, "点击了第1项", Toast.LENGTH_LONG).show();
+							dm.dismiss();
 							break;
 						case R.id.menu_2:
 							Toast.makeText(MainActivity.this, "点击了第2项", Toast.LENGTH_LONG).show();
+							dm.dismiss();
 							break;
 						default:
+							dm.dismiss();
 							break;
 						}
 					}

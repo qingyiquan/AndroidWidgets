@@ -45,6 +45,14 @@ public class SwipeView extends FrameLayout {
 	View frontView;
 	View backView;
 	
+	SwipeListener swipeListener = new SwipeListener() {
+		
+		@Override
+		public void onOpen() {
+			//默认不做任何事情
+		}
+	};
+	
 	boolean isFrontViewInited = false;
 	
 	@SuppressLint("NewApi")
@@ -199,6 +207,15 @@ public class SwipeView extends FrameLayout {
 			initFrontAnim();
 		}
 	}
+	
+	@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		// TODO 自动生成的方法存根
+		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+		if (!isFrontViewInited) {
+			initFrontAnim();
+		}
+	}
 
 	public View getFrontView() {
 		if (frontView == null) {
@@ -238,14 +255,20 @@ public class SwipeView extends FrameLayout {
 		isFrontViewInited = true;
 	}
 	
+	public void setSwipeListener(SwipeListener listener) {
+		swipeListener = listener;
+	}
+	
 	public void openFrontLeft() {
 		generateViewAnim(frontView, frontOriginX - defaultLeftOffset);
 		currentOpenState = STATE_OPEN_LEFT;
+		swipeListener.onOpen();
 	}
 	public void openFrontRight() {
 		//往右打开
 		generateViewAnim(frontView, frontOriginX + defaultRightOffset);
 		currentOpenState = STATE_OPEN_RIGHT;
+		swipeListener.onOpen();
 	}
 	public void closeFront() {
 		if (frontView == null) {
@@ -274,5 +297,10 @@ public class SwipeView extends FrameLayout {
 		{
 			view.getParent().requestDisallowInterceptTouchEvent(true); //禁用父亲阻挡孩子的事件。
 		}
+	}
+	
+	public interface SwipeListener
+	{
+		public void onOpen();
 	}
 }
