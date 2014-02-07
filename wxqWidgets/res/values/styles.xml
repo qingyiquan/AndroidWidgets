@@ -16,5 +16,24 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="ContactOptionsButtonStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/contact_options_item_height</item>
+        <item name="android:textSize">@dimen/contact_options_text_size</item>
+        <item name="android:textColor">@color/contact_options_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">@drawable/dialogmenu_textview_selector</item>
+    </style>
+    
+    <style name="DialogNoBackground" parent="@android:style/Theme.Dialog"> 
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style> 
 
 </resources>
