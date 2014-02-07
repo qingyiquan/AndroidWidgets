@@ -40,7 +40,7 @@ public class SwipeViewListActivity extends Activity {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			// 重置
 			SwipeView reuseView = (SwipeView) super.getView(position, convertView, parent);
-			Integer tag = (Integer) reuseView.getTag(2);
+			Integer tag = (Integer) reuseView.getTag(R.id.list_item_position_key);
 			if (tag == null || position != tag.intValue()) {
 				reuseView.setTag(R.id.list_item_position_key, Integer.valueOf(position));
 				reuseView.closeFront();
