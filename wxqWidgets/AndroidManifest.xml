@@ -13,6 +13,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!-- this is the main activity -->
         <activity
             android:name="com.wxq.samples.MainActivity"
             android:label="@string/app_name" >
