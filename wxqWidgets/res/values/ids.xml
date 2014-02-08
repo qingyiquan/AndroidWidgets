@@ -5,5 +5,5 @@
     <item type="id" name="cancel"/>
     <item type="id" name="menu_1"/>
     <item type="id" name="menu_2"/>
-    
+    <item type="id" name="list_item_position_key"/>
 </resources>
