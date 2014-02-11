@@ -16,5 +16,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="stop service"/>
+    
+    <Button 
+        android:id="@+id/btn_swipe_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SwipeView List"/>
+    
+    <Button 
+        android:id="@+id/btn_dialog_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialog Menu bottom|center"/>
 
 </LinearLayout>
