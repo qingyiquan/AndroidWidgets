@@ -15,14 +15,14 @@ import android.util.Log;
 public class MessengerClient {
 	
 	Context mContext;
-	ClientListener userConnection;
+	ClientListener userConnection = new BaseClientListener();
 
 	public MessengerClient(Context mContext,ClientListener connection) {
 		super();
 		this.mContext = mContext;
-		this.userConnection = connection;
-		if (this.userConnection == null) {
-			this.userConnection = ClientListener.ClientListenerFactory.getDefaultInstance();
+		
+		if (this.userConnection != null) {
+			this.userConnection = connection;
 		}
 	}
 
